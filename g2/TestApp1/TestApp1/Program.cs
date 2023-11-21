@@ -81,6 +81,29 @@ namespace krasn2023.sfu.training
 
         }
 
+        private static void Summator() {
+            WriteLine("Calculator - summator, enter 'x' to exit.");
+
+            while (true)
+            {
+                Write("Enter number1: "); string str1 = Console.ReadLine();
+
+                Write("Enter number2: "); string str2 = Console.ReadLine();
+                if (str1 == "x" || str2 == "x") { WriteLine("By!"); break; }
+                //int d1 = int.Parse(str1);
+                //int d2 = int.Parse(str2);
+                int res = 0, d1 = 0, d2 = 0;
+                if (!int.TryParse(str1, out d1) || !int.TryParse(str2, out d2))
+                {
+                    WriteLine("Wrong number format.."); continue;
+                }
+
+                checked { res = d1 + d2; }
+                WriteLine($"{d1} + {d2} = {res}");
+            }
+
+        }
+
         static void Main(string[] args)
         {
 
@@ -89,31 +112,13 @@ namespace krasn2023.sfu.training
             //hello.krasn2023.sfu.training.Hello.SayGreets();
 
             // TestNumbers();
-            WriteLine("Calculator - summator, enter 'x' to exit.");
-            
-                while (true)
-                {
-                    Write("Enter number1: "); string str1 = Console.ReadLine();
+            int res = 111;
+            Summator();
 
-                    Write("Enter number2: "); string str2 = Console.ReadLine();
-                    if (str1 == "x" || str2 == "x") { WriteLine("By!"); break; }
-                    //int d1 = int.Parse(str1);
-                    //int d2 = int.Parse(str2);
-                    int res = 0, d1 = 0, d2 = 0;
-                    if (!int.TryParse(str1, out d1) || !int.TryParse(str2, out d2))
-                    {
-                        WriteLine("Wrong number format.."); continue;
-                    }
-
-                    checked { res = d1 + d2; }
-                    WriteLine($"{d1} + {d2} = {res}");
-                }
-            
-            {
-                int res = 0;
-
-            }
-            
+            // input string: 123.23 /(*)(+)(-) 333.55
+            // 222    + 2323.222
+            // 333 /12.333
+            //...
 
             ReadLine();
 
