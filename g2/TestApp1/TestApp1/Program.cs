@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using hello.krasn2023.sfu.training;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace krasn2023.sfu.training
         {
             SayGreets();
             SayGreets(true);
+            hello.krasn2023.sfu.training.Hello.SayGreets();
 
             ReadLine();
 
