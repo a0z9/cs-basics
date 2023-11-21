@@ -29,6 +29,43 @@ namespace krasn2023.learning
             SayHello(name);
         }
 
+
+        private static void TestCalculus() {
+            // Convert and Parse
+            // simple calc
+            WriteLine("Calc - summator v.1, press 'x' to exit. Enjoy.");
+            while (true)
+            {
+                Write("Enter number1: "); string ds1 = ReadLine(); if (ds1 == "x") break;
+                int data1 = int.Parse(ds1);
+                Write("Enter number2: "); string ds2 = ReadLine(); if (ds2 == "x") break;
+                int data2 = int.Parse(ds2);
+                WriteLine($"{data1} + {data2} = {data1 + data2}");
+            }
+
+            WriteLine("Calc - summator v.2, press 'x' to exit. Enjoy.");
+            while (true)
+            {
+                Write("Enter number1: "); string ds1 = ReadLine();
+                Write("Enter number2: "); string ds2 = ReadLine();
+                if (ds1 == "x" || ds2 == "x") break;
+                int summa = 0, data2 = 0, data1 = 0;
+
+                if (!int.TryParse(ds1, out data1) || !int.TryParse(ds2, out data2))
+                {
+                    WriteLine("Wrong number format, try again or press x to exit...");
+                    continue;
+                }
+                else 
+                {
+                    checked { summa = data1 + data2; }
+
+                }
+              
+                WriteLine($"{data1} + {data2} = {summa}");
+            }
+
+        }
         private static void TestNumbers() {
             //checked
             //{
@@ -76,16 +113,7 @@ namespace krasn2023.learning
             // String
             string s1 = "Hi string!!!";
 
-            // Convert and Parse
-            // simple calc
-            while (true)
-            {
-                Write("Enter number1: "); string ds1 = ReadLine(); if (ds1 == "x") break;
-                int data1 = int.Parse(ds1);
-                Write("Enter number2: "); string ds2 = ReadLine(); if (ds2 == "x") break;
-                int data2 = int.Parse(ds2);
-                WriteLine($"{data1} + {data2} = {data1 + data2}");
-            }
+         
 
 
         }
@@ -97,7 +125,19 @@ namespace krasn2023.learning
             }
             //TestHello();
             TestNumbers();
-        
+            //TestCalculus();
+
+            int a=0,b=0,i=0;
+            ++b;
+
+            int res = a++ + --b - --i + b++;
+            WriteLine("----------------");
+            while (i++ < 5) WriteLine(i);
+            WriteLine("----------------");
+
+
+
+            WriteLine(res);
         ReadLine();
 
 
