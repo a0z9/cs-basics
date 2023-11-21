@@ -10,6 +10,7 @@
 
 ### C# history
 - https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
+- https://www.geeksforgeeks.org/c-sharp-version-history/
 
 ### dotnet Source Browser
 - https://source.dot.net/
@@ -26,7 +27,7 @@
 - #### dotnet String class
     https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/String.cs
 
-### c\# online compilers
+### C\# online compilers
 - https://www.programiz.com/csharp-programming/online-compiler/
 - https://www.onlinegdb.com/online_csharp_compiler
 - https://onecompiler.com/csharp
