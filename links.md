@@ -3,13 +3,16 @@
 - https://github.com/microsoft/referencesource
 
 ### dotnet versions and downloads
-https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli
+- https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli
 
 ### C# versions
-https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/configure-language-version
+- https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/configure-language-version
+
+### C# history
+- https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 
 ### dotnet Source Browser
-https://source.dot.net/
+- https://source.dot.net/
 
 ### dotnet open src projects
 - https://github.com/dotnet/docs/blob/main/docs/welcome.md
