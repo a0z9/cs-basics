@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{28962503-D100-46F1-B6CE-49E2BAEC9542}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestApp2_g2</RootNamespace>
+    <RootNamespace>krasn2023.sfu.training</RootNamespace>
     <AssemblyName>TestApp2-g2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
