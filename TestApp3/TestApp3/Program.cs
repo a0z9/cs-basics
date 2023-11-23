@@ -7,65 +7,10 @@ namespace krasn23.learning
         public int data;  //field
     }
 
-    public class A1
-    {
-        private const int MAX = 300000;
-        private int _data;  //field
-        private static int counter;
-        private static readonly string vendor;
-
-        public static int Counter { get { return counter; } }
-
-
-        static A1(){
-            //....
-            //
-            WriteLine("+++ static ctor of class A1");
-            vendor = "Kras";
-
-         }
-
-        public A1(int Data, string Message, string pmessage)
-        {
-            this.Data = Data;
-            this.Message = Message;
-            PrivateMessage = pmessage;
-            counter++;
-            WriteLine("+++ ctor of class A1, o:" + GetHashCode());
-        }
-
-        public A1(int data) : this(data, "Hello", "Private party")
-        { }
-
-        public A1() : this(8848, "Hello", "Private party") { }
-
-
-        public string Message { get; set; }
-
-        public string PrivateMessage { get; private set; }
-
-        public int Data
-        {
-            get { return _data; }
-            set {
-                if (value >= MAX) throw new Exception("EXtra VAL!!!" + value);
-                else
-                {
-                    _data = value;
-                }
-            }
-        }
-
+    
         //public int getData() { return _data; }
         //public void setData(int value) { _data = value; }
 
-        public string getInfo() {
-            return $"A1 class, object:{GetHashCode()}, data={_data}, message={Message}, " +
-                $"private message={PrivateMessage}.";
-
-        }
-
-    }
 
     class B {
         public int data;
@@ -94,16 +39,28 @@ namespace krasn23.learning
             string s1 = "aaaa";
             string s2 = new string("aaaa");
             //---------------------------------------------------
-            WriteLine("-------------------");
-            A1 aa1 = new A1(123);
-           // aa1.PrivateMessage = "qqq";
-            WriteLine(aa1.getInfo());
-            aa1.Data = 3000;
-            WriteLine(aa1.getInfo());
-            WriteLine("Counter:" + A1.Counter);
-            new A1(); new A1(); new A1();
-            WriteLine("Counter:" + A1.Counter);
+            {
+                WriteLine("-------------------");
+                A1 aa1 = new A1(123);
+                // aa1.PrivateMessage = "qqq";
+                WriteLine(aa1.getInfo());
+                aa1.Data = 3000;
+                WriteLine(aa1.getInfo());
+                WriteLine("Counter:" + A1.Counter);
+               // for (int i = 1; i < 100_000; i++) { 
+                    new A1(); new A1(); new A1(); 
+                //}
+                
+                WriteLine("Counter:" + A1.Counter);
 
+                WriteLine("----------------------------------------");
+                B1 b11 = new B1();
+                WriteLine(b11.getInfo());
+                A1 b12 = new B1();
+                WriteLine(b12.getInfo());
+
+
+            }
             ReadKey();
         }
     }
