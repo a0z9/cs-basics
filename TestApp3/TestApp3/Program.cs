@@ -11,11 +11,14 @@ namespace krasn23.learning
     {
         private const int MAX = 300000;
         private int _data;  //field
+        private static int counter;
+
         public A1(int data, string message, string pmessage)
         {
             Data = data;
             Message = message;
             PrivateMessage = pmessage;
+            counter++;
         }
 
         public A1(int data) : this(data, "Hello", "Private party")
@@ -53,12 +56,8 @@ namespace krasn23.learning
 
     class B {
         public int data;
-    
-    
+        
     }
-
-
-
 
     internal class Prog {
         static void Main(string[] args)
@@ -84,9 +83,11 @@ namespace krasn23.learning
             //---------------------------------------------------
             WriteLine("-------------------");
             A1 aa1 = new A1(123);
+           // aa1.PrivateMessage = "qqq";
             WriteLine(aa1.getInfo());
             aa1.Data = 3000;
             WriteLine(aa1.getInfo());
+
 
 
         }
