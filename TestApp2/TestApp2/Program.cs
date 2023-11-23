@@ -199,6 +199,14 @@ namespace krasn2023.sfu.training
 
         }
 
+        static bool trySetValues(in int a)
+        {
+            // calculus
+            //a = 2023;
+            return true;
+
+        }
+
 
         static int Summa(int[] arr) {
             int s = 0;
@@ -250,7 +258,9 @@ namespace krasn2023.sfu.training
             WriteLine("-------------------------------------");
             
             WriteLine("Summa=" + Summa(new []{ 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
-            WriteLine("Summa=" + Summa2(10, 1, 2, 3, 4, 5, 6, 7, 8, 9));
+            WriteLine("Summa=" + Summa2(mult:10, 1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+            ReadKey();
 
         }
 
