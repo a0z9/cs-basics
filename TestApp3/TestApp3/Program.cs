@@ -12,13 +12,26 @@ namespace krasn23.learning
         private const int MAX = 300000;
         private int _data;  //field
         private static int counter;
+        private static readonly string vendor;
 
-        public A1(int data, string message, string pmessage)
+        public static int Counter { get { return counter; } }
+
+
+        static A1(){
+            //....
+            //
+            WriteLine("+++ static ctor of class A1");
+            vendor = "Kras";
+
+         }
+
+        public A1(int Data, string Message, string pmessage)
         {
-            Data = data;
-            Message = message;
+            this.Data = Data;
+            this.Message = Message;
             PrivateMessage = pmessage;
             counter++;
+            WriteLine("+++ ctor of class A1, o:" + GetHashCode());
         }
 
         public A1(int data) : this(data, "Hello", "Private party")
@@ -87,9 +100,11 @@ namespace krasn23.learning
             WriteLine(aa1.getInfo());
             aa1.Data = 3000;
             WriteLine(aa1.getInfo());
+            WriteLine("Counter:" + A1.Counter);
+            new A1(); new A1(); new A1();
+            WriteLine("Counter:" + A1.Counter);
 
-
-
+            ReadKey();
         }
     }
 }
