@@ -16,9 +16,9 @@ namespace krasn23.learning
             int c = a; a = b; b = c;
         }
 
-        static void Swap<T>(ref T? a, ref T? b)
+        static void Swap<T>(ref T a, ref T b)
         {
-            T? c = a; a = b; b = c;
+            T c = a; a = b; b = c;
         }
 
 
