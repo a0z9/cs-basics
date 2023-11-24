@@ -48,9 +48,10 @@ namespace krasn23.learning
                 WriteLine(aa1.getInfo());
                 WriteLine("Counter:" + A1.Counter);
                // for (int i = 1; i < 100_000; i++) { 
-                    new A1(); new A1(); new A1(); 
+                    new A1(); new A1(); new A1();
                 //}
-                
+
+
                 WriteLine("Counter:" + A1.Counter);
 
                 WriteLine("----------------------------------------");

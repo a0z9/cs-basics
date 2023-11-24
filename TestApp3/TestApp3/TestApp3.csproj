@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>krasn23.learning</RootNamespace>
+    <StartupObject>krasn23.learning.Prog2</StartupObject>
   </PropertyGroup>
 
 </Project>
