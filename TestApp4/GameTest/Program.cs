@@ -8,6 +8,7 @@ namespace game.krasn23.learning {
         static void MoveViaCastle(IMovable mv) {
             mv.MoveLeft().MoveLeft().MoveUp().MoveDown().MoveLeft().MoveLeft().
                 MoveDown().MoveDown();
+            
         }
 
     static void Main(String[] a) {
@@ -20,7 +21,7 @@ namespace game.krasn23.learning {
             MoveViaCastle(monster1);
 
             Sprite s = man1;
-            Object o = monster1;
+            Object o = (Object)monster1;
 
             int a1 = 122;  Object o2 = a1; 
 
