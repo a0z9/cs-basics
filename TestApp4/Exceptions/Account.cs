@@ -20,9 +20,9 @@ namespace Exceptions
         public int Id { get; private set; }
         private static Random r = new Random((int)DateTime.Now.Ticks);
         // Person, Name, Bla-bla-bla
-        private int Deposit {
+        public int Deposit {
             get => _deposit; 
-            set {
+            private set {
                 if (value >= MIN && value <= MAX) _deposit = value;
                 else {
                     throw new AccounException($"Deposite is out of bounds: {value}");
