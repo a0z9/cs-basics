@@ -1,4 +1,5 @@
 ﻿
+using Exceptions;
 using static System.Console;
 
 namespace game.krasn23.learning
@@ -18,19 +19,27 @@ namespace game.krasn23.learning
                 int b = 1 / (a[2] - 1);
 
             }
-            catch(IndexOutOfRangeException e) {
+            catch (IndexOutOfRangeException e)
+            {
                 WriteLine($"1. Exception: {e.Source}, message: {e.Message}");
 
             }
 
             catch (Exception e)
             {
-                WriteLine($"2. Math Exception: {e.Source}, message: {e.Message}");
+                WriteLine($"2. Math Exception: {e.Source}, message: {e.Message}\n {e}");
+                //Log, sent to external Log , etc..
+                // throw new Exception();
+                //throw e;
+            }
+            finally{
+                WriteLine($"Finally block..");
+            }
 
-            }
-            finally {
-                WriteLine("Finally block..");
-            }
+            Account acc = new Account(500);
+            acc.Withdraw(490);
+
+
 
             WriteLine("End of file..");
             ReadKey();
