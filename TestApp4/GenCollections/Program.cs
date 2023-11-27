@@ -47,6 +47,7 @@ namespace gencollections.krasn23.learning
 
             printCollection(res);
             alist2.Sort(new MyComp());
+            
             printCollection(alist2);
 
             // Array sort
@@ -67,10 +68,17 @@ namespace gencollections.krasn23.learning
             inventory.Sort((x, y) => x.Length - y.Length);
             printCollection(inventory);
 
+            LinkedList<string> list = new LinkedList<string>();
 
 
 
+            // Stack, Queue
 
+            // Dictionary
+
+
+
+            ReadKey();
         }
     }
 
