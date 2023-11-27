@@ -52,7 +52,7 @@ namespace krasn23.a0z9.learning
             using (FileStream fs = new FileStream("file2.txt", FileMode.Append))
             {
 
-                string data = $"DAta: {DateTime.Now:yyyy.MM.dd.mm.ss.fff}.txt\n";
+                string data = $"DAta: {DateTime.Now:yyyy.MM.dd.mm.ss.fff}\n";
                 byte[] buffer = Encoding.UTF8.GetBytes(data);
                 fs.Write(buffer, 0, buffer.Length);
 
