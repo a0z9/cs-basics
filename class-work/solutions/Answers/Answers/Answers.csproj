@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0D0ABFE1-9ABC-4AFF-84E9-FF713F48F00E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>krasn23.andestech.learning</RootNamespace>
+    <RootNamespace>krasn23.a0z9.learning</RootNamespace>
     <AssemblyName>Answers</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

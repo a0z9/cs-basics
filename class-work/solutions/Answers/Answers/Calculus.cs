@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 using static System.Console;
 
-namespace krasn23.andestech.learning
+namespace krasn23.a0z9.learning
 {
     internal class Calculus
     {
