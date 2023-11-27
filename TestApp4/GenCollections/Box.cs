@@ -37,6 +37,19 @@ namespace gencollections.krasn23.learning
             set { if (index < size && index >= 0) Data[index] = value; }
         }
 
+        public static Box<T> operator ++(Box<T> b)
+        {
+            b.size++; return b;
+        }
+
+        public static Box<T> operator --(Box<T> b)
+        {
+            b.size--; return b;
+        }
+
+
+
+
     }
 
 }

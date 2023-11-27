@@ -71,12 +71,24 @@ namespace gencollections.krasn23.learning
             LinkedList<string> list = new LinkedList<string>();
 
 
-
             // Stack, Queue
 
+
+
             // Dictionary
+            Dictionary<int, string> dict =
+                new Dictionary<int, string> {
+                    {1,"Hello!" },
+                    { -10, "Hi!"},
+                    { 2, "HowdoUdo!!"}
+                };
+            dict.Add(7, "Salute!!");
+            dict[7] = "!!Salute!!";
 
-
+            foreach (int k in dict.Keys) WriteLine($"{k} --> {dict[k]}");
+            WriteLine("-------------------------------------------------");
+            var odict = dict.OrderBy(x => x.Key).ToDictionary(x => x.Key, v => v.Value);
+            foreach (int k in odict.Keys) WriteLine($"{k} --> {odict[k]}");
 
             ReadKey();
         }
