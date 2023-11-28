@@ -22,13 +22,22 @@ namespace gencollections.krasn23.learning
         {
             Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
-            Box<int> box = new Box<int>(3);
-            box.Add(100);
-            box.Add(3000);
-            box.Add(-300);
-            box.Add(-440);
+            Box<int> box1 = new Box<int>(3);
+            box1.Add(100);
+            box1.Add(3000);
+            box1.Add(-300);
+            box1.Add(-440);
 
-            printCollection(box);
+            Box<int> box2 = new Box<int>(2);
+            box2.Add(1);
+            box2.Add(300);
+
+            Box<int> box3 = box1 + box2;
+
+            printCollection(box1);
+            printCollection(box2);
+            printCollection(box3);
+
             //--- Coll test
             ArrayList alist1 = new ArrayList(10) { 1, 2, new Box<double>(), "Hello!" };
             printCollection(alist1);

@@ -47,7 +47,15 @@ namespace gencollections.krasn23.learning
             b.size--; return b;
         }
 
+        public static Box<T> operator +(Box<T> b1, Box <T> b2)
+        {
+            Box<T>b3 = new Box<T>(b1.size + b2.size);
+            Array.Copy(b1.Data, b3.Data, b1.size);
+            Array.Copy(b2.Data, 0, b3.Data, b1.size, b2.size);
 
+            return b3;
+           
+        }
 
 
     }
