@@ -24,8 +24,10 @@ namespace krasn23.a0z9.learning
             WriteLine("Привет, " + name + "!!");
             WriteLine($"Привет, {name}!!");
             WriteLine("Привет, {0}!!",name);
+            
             SayHello(name);
             Hello.SayHello(name);
+            Hello2.SayHello(name);
 
 
 
