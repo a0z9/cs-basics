@@ -1,14 +1,29 @@
 ﻿using static System.Console;
-
 Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-
 //VarTest();
-StringToVars();
-
+//StringToVars();
+Summator();
 
 Write("Press any key ..");  ReadKey();
 
+static void Summator() {
+    WriteLine("Summator, press 'x' to exit.. Enjoy!");
+    int a, b;
+    string sa, sb;
 
+    while(true)
+    {
+        Write("Number1: "); sa = ReadLine();
+        Write("Number2: "); sb = ReadLine();
+        if (sb == "x" || sa == "x") break;
+
+        if (int.TryParse(sa, out a) && int.TryParse(sb, out b))
+        {
+            WriteLine($"{a} + {b} = {a + b}");
+        }
+        else { WriteLine("Wrong number format.."); }
+    }
+}
 
 static void VarTest() {
     WriteLine("--- Test VArs ---");
