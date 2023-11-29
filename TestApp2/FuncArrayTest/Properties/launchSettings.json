@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FuncArrayTest": {
+      "commandName": "Project",
+      "commandLineArgs": "-h --data /h --log-level 3"
+    }
+  }
+}
