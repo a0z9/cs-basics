@@ -6,8 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <PlatformTarget>x64</PlatformTarget>
+    <StartupObject>krask23.a0z9.learning.LoopsIfSwitchTest</StartupObject>
     <!--<CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>-->
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
 
 
 
