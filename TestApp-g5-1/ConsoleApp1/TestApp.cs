@@ -63,8 +63,9 @@ namespace krasn23.a0z9.learning
 
             float f1 = 1.23456789012345678f;
             WriteLine(f1);
-            double d1 = 1.23456789012345678;
+            double d1 = 1.23456789012345678, d2 = 100.234e-5;
             WriteLine(d1);
+
 
 
 
