@@ -1,39 +1,5 @@
 ﻿using static System.Console;
 
-
-
-static void LoopTest() {
-
-    for (int i = 5, k = 1; i > -1 && k < 5; i -= 2, k++)
-    {
-        WriteLine($"i={i}, k={k}");
-    }
-
-    {
-        int i = 0;
-        for (; ; )
-        {
-            if (i > 4) break;
-            WriteLine($"i=>{i}");
-            //..
-            i++;
-        }
-    }
-
-    for (int i = 0; i <= 4; i++) WriteLine($"i=>{i}");
-    WriteLine("--------------------------------------");
-    int j = 5;
-    do
-    {
-        WriteLine($"j=>{j}");
-        --j;
-    }
-    while (j >= 0);
-    WriteLine("--------------------------------------");
-
-
-}
-
 WriteLine("Func Array Test");
 //Summator();
 { int i = 22;}
@@ -90,7 +56,38 @@ static void Summator()
         else { WriteLine("Wrong format!!!"); }
     }
 }
+static void LoopTest()
+{
 
+    for (int i = 5, k = 1; i > -1 && k < 5; i -= 2, k++)
+    {
+        WriteLine($"i={i}, k={k}");
+    }
+
+    {
+        int i = 0;
+        for (; ; )
+        {
+            if (i > 4) break;
+            WriteLine($"i=>{i}");
+            //..
+            i++;
+        }
+    }
+
+    for (int i = 0; i <= 4; i++) WriteLine($"i=>{i}");
+    WriteLine("--------------------------------------");
+    int j = 5;
+    do
+    {
+        WriteLine($"j=>{j}");
+        --j;
+    }
+    while (j >= 0);
+    WriteLine("--------------------------------------");
+
+
+}
 
 enum LogSeverity
 {
