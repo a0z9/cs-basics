@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,6 +29,32 @@ namespace krasn23.a0z9.learning
             SayHello(name);
             Hello.SayHello(name);
             Hello2.SayHello(name);
+        }
+        static int Summator(string s1, string s2) {
+
+            //int a1 = int.Parse(s1);
+            // int a2 = int.Parse(s2);
+            int a1 = 0, a2 = 0;
+            if (int.TryParse(s1, out a1) && int.TryParse(s2, out a2))
+            { return a1 + a2; }
+            WriteLine("Wrong format!!!"); return 0;
+        }
+        static void Summator()
+        {
+            WriteLine("Summator of int, press 'x' to exit.");
+            int a1, a2;
+            string s1, s2;
+           
+            while (true)
+            {
+                Write("Number1="); s1=ReadLine();
+                Write("Number2="); s2 = ReadLine();
+                if( s1=="x" || s2 == "x") { WriteLine("By."); break; }
+
+                if (int.TryParse(s1, out a1) && int.TryParse(s2, out a2))
+                { WriteLine($"{a1} + {a2} = {a1 + a2}"); }
+                else { WriteLine("Wrong format!!!"); } 
+            }
         }
         static void Main(string[] args)
         {
@@ -116,16 +143,25 @@ namespace krasn23.a0z9.learning
             WriteLine($"{"a1&a2",5} {Convert.ToString(a1 &a2,2),10}");
             WriteLine($"{"a1|a2",5} {Convert.ToString(a1|a2,2),10}");
             WriteLine($"{"a1^a2",5} {Convert.ToString(a1 ^a2,2).PadLeft(8,'0'),10}");
+            unchecked
+            {
+                WriteLine($"{"~a1",5} {Convert.ToString((byte)~a1, 2).PadLeft(8, '0'),10}");
+            }
 
+            int k1 = 1 , k2 = 1, k3 = 1, res=0;
 
+            res = ++k1 - --k2 + --k3 - k3++ + --res;
+            //2 - 0 + 0 - 0 -1
+            k1++;
+            ++k1;
 
+            WriteLine("res=" + res);
 
-
-
-
-
-
-
+            //--------------------------------------------------
+            WriteLine("----------- Summator test -----------");
+           
+            WriteLine(Summator("12s3  ", " -23 " ));
+            Summator();
 
 
             ReadKey();
