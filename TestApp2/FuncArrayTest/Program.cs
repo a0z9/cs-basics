@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Collections;
+using static System.Console;
 
 namespace krasn23.a0z9.learning
 {
@@ -76,6 +77,27 @@ namespace krasn23.a0z9.learning
             while (j >= 0);
             WriteLine("--------------------------------------");
         }
+        static bool F1(in int a, out int data)
+        {
+            int b = a;
+            // a++;
+            data = b;
+            return true;
+        }
+        static (int, int) F2(in int a)
+        {
+            int b = a;
+            // a++;
+            //data = b;
+            return (a+1,a-1);
+        }
+
+        static void echo(IEnumerable data)
+        { 
+         Write("[");
+         foreach(var item in data) Write(item + ",");
+         WriteLine("\b]");    
+        }
 
         private static void Main(string[] args)
         {
@@ -124,6 +146,21 @@ namespace krasn23.a0z9.learning
             WriteLine("Summa=" + Summ1([1,2,3,4,5,6,7,8,9]));
             WriteLine("Summa=" + Summ1(new double[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9}));
             WriteLine("Summa=" + Summ2(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+           
+            WriteLine($"[{String.Join(',',GetRandomInts())}]");
+            echo(GetRandomInts());
+
+            WriteLine(" ------------ TUPLE FUNC TEST ----------- ");
+            int g1, g2;
+            (g1, g2) = F2(11);
+            WriteLine($"g1={g1}, g2={g2}.");
+
+            (int v1, int v2) tuple = (1, 1);
+                
+            tuple =    F2(22);
+            WriteLine($"v1={tuple.v1}, v2={tuple.v2}.");
+
 
             ReadKey();
 
