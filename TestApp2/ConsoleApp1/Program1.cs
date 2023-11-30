@@ -4,6 +4,7 @@ namespace krasn23.a0z9.learning {
 
     internal class Program1
     {
+        #region Summators       
         static void Summator()
         {
             WriteLine("Summator, press 'x' to exit.. Enjoy!");
@@ -42,6 +43,8 @@ namespace krasn23.a0z9.learning {
             foreach (int d in arr) summa += d;
             return summa;
         }
+
+        #endregion
         static void VarTest()
         {
             WriteLine("--- Test VArs ---");
@@ -155,16 +158,12 @@ namespace krasn23.a0z9.learning {
             jarr2d[1] = new int[5];
             jarr2d[2] = new int[2];
 
-
-
-
         }
         static void printArray<T>(T[] arr){
             Write("[");
             foreach (T t in arr) Write(t.ToString() + ",");
             Write("\b]\n");
         }
-
         static int[] getRandomInts(int N = 10, int min = -50, int max = 50)
         {
             int[] arr = new int[N];
@@ -172,7 +171,6 @@ namespace krasn23.a0z9.learning {
             for (int i = 0; i < N; i++) arr[i] = r.Next(min, max); 
             return arr;
         }
-
         #region Echo Functions
 
         static string EchoByte(byte b)
@@ -195,13 +193,37 @@ namespace krasn23.a0z9.learning {
             return Convert.ToString(b, 2).PadLeft(8 * sizeof(ushort), '0');
         }
         #endregion
+        static bool F1(in int a, out int b1, out int b2) {
+            //a++;
+            b1 = b2 = a+1;
+            return true;
+        }
+
+        static (int,int) F2(in int a)
+        {
+            //a++;
+            //b1 = b2 = a + 1;
+            return (a+1,a-1);
+        }
+
+
         private static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             //VarTest();
             //StringToVars();
             //Summator();
-            ArrayTest();
+            //ArrayTest();
+            int c1, c2;
+            WriteLine(F1(1, out c1, out c2));
+            WriteLine(c1 +", " + c2);
+
+            (c1, c2) = F2(10);
+            WriteLine(c1 + ", " + c2);
+
+            (int v1, int v2) tulip = F2(7);
+            WriteLine(tulip.v1 + ", " + tulip.v2);
+
 
             Write("Press any key .."); ReadKey();
 
