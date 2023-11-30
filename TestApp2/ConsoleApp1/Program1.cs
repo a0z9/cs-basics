@@ -23,6 +23,25 @@ namespace krasn23.a0z9.learning {
                 else { WriteLine("Wrong number format.."); }
             }
         }
+
+        static double Summa(int mult=1, params double[] arr)
+        {
+            double summa = 0;
+            foreach (double d in arr) summa += d;
+            return summa*mult;
+        }
+
+        static double SummatorD(double[] arr) {
+            double summa = 0;
+            foreach (double d in arr) summa += d;
+            return summa;
+        }
+        static int SummatorD(int[] arr)
+        {
+            int summa = 0;
+            foreach (int d in arr) summa += d;
+            return summa;
+        }
         static void VarTest()
         {
             WriteLine("--- Test VArs ---");
@@ -117,12 +136,18 @@ namespace krasn23.a0z9.learning {
             printArray<int>( getRandomInts(min: 10, N: 20, max: 150));
             printArray<int>(getRandomInts());
 
+            WriteLine("-------- Summator Array Test ---------------");
+            WriteLine($"S1={SummatorD(new double[] {1,2,3,4,5,6,7,8,9}) }");
+            WriteLine($"S2={SummatorD(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 } ) }");
+            WriteLine($"S3={Summa(mult:10, (byte)1, 2.0d, 3.0f, (short)4, 5, 6, 7, 8, 9, 10)}");
+            
             // 2d arrays
             int[,] arr2d = new int[3, 6];
             int[,] arr2d1 = new int[,] {
             {-100,2,3 },
             {2,6,0}
             };
+            WriteLine($"rows:{arr2d.GetLength(0)}, cols:{arr2d.GetLength(1)}");
 
             // jagged arays
             int[][] jarr2d = new int[3][];
