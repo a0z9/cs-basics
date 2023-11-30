@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-namespace krask23.a0z9.learning {
+namespace krasn23.a0z9.learning {
 
     internal class Program1
     {
@@ -100,6 +100,54 @@ namespace krask23.a0z9.learning {
             WriteLine(double.TryParse("1.2330002e1", out d));
             WriteLine($"{d}*2 = {d * 2}");
         }
+        static void ArrayTest()
+        {
+            int[] arr = new int[10];
+            int[] arr2 = new[] { 1, 2, 3 - 33, 4, 5, -333 };
+            int[] arr3 = new int[] { 10, -2, 3 - 33, 4, 5, -3,33 };
+            int[] arr4 = [1, 2, 3 - 44, 5, 6, 77, 8];
+
+            // arr2[7] = 111; //exception!!
+
+            for (int i = 0; i < arr.Length; i++) arr[i] = i * i;
+            WriteLine($"[{String.Join(',', arr)}]");
+            printArray<int>(arr2);
+            printArray(arr3);
+            WriteLine("-------- Random Array ---------------");
+            printArray<int>( getRandomInts(min: 10, N: 20, max: 150));
+            printArray<int>(getRandomInts());
+
+            // 2d arrays
+            int[,] arr2d = new int[3, 6];
+            int[,] arr2d1 = new int[,] {
+            {-100,2,3 },
+            {2,6,0}
+            };
+
+            // jagged arays
+            int[][] jarr2d = new int[3][];
+            jarr2d[0] = new int[1];
+            jarr2d[1] = new int[5];
+            jarr2d[2] = new int[2];
+
+
+
+
+        }
+        static void printArray<T>(T[] arr){
+            Write("[");
+            foreach (T t in arr) Write(t.ToString() + ",");
+            Write("\b]\n");
+        }
+
+        static int[] getRandomInts(int N = 10, int min = -50, int max = 50)
+        {
+            int[] arr = new int[N];
+            Random r = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < N; i++) arr[i] = r.Next(min, max); 
+            return arr;
+        }
+
         #region Echo Functions
 
         static string EchoByte(byte b)
@@ -127,7 +175,8 @@ namespace krask23.a0z9.learning {
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             //VarTest();
             //StringToVars();
-            Summator();
+            //Summator();
+            ArrayTest();
 
             Write("Press any key .."); ReadKey();
 

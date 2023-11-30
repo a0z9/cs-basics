@@ -6,7 +6,7 @@ using System.Threading;
 
 using static System.Console;
 
-namespace krask23.a0z9.learning
+namespace krasn23.a0z9.learning
 {
 
     enum FileAccess { 
