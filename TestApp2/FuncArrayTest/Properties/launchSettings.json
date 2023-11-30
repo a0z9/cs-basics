@@ -2,7 +2,13 @@
   "profiles": {
     "FuncArrayTest": {
       "commandName": "Project",
-      "commandLineArgs": "-h --data /h --log-level 3"
+      "commandLineArgs": "-h -m208 /h --log-level 3",
+      "remoteDebugEnabled": false
+    },
+    "Профиль 1": {
+      "commandName": "Project",
+      "commandLineArgs": "-h -m208 /h --log-level 3",
+      "remoteDebugEnabled": false
     }
   }
 }

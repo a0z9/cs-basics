@@ -8,4 +8,8 @@
     <RootNamespace>krasn23.a0z0.learning</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Program_old.cs"  />
+  </ItemGroup>
+  
 </Project>
