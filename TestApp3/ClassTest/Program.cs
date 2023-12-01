@@ -16,7 +16,7 @@ namespace krasn23.a0z9.learning
             WriteLine(a);
 
             WriteLine(new A(10));
-            WriteLine(new A() {Data = -9827987});
+            WriteLine(new A(10,Status.TopSecret));
             WriteLine(new A());
 
 
