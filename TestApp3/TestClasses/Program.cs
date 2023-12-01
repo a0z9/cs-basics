@@ -8,14 +8,17 @@ namespace krasn23.a0z9.learning
         static void Main(string[] args)
         {
             WriteLine("---------- Test Classes -----------");
-            A a = new A() { Data = 111 };
+            //A a = new A() { Data = 111 };
+            A a = new A(111);
+            WriteLine("A Counter=" + A.Counter);
             //a.Data = 1234;
             A a2 = a; a2.Data = 11;
 
             WriteLine(a);
-            WriteLine(new A() { Data = 100 });
+            WriteLine(new A(100));
             WriteLine(new A());
             WriteLine("MIN_DATA=" + A.MIN_DATA);
+            WriteLine("A Counter=" + A.Counter);
 
 
             WriteLine("---------- Test Structs -----------");
@@ -29,6 +32,13 @@ namespace krasn23.a0z9.learning
             new Connection("192.11.22.33", 367);
             new Connection();
             new Connection(1414);
+
+            WriteLine("---------- Inheritance Test -----------");
+            C c = new C();
+            C c2 = new C(11);
+
+            A c3 = new C(7);
+            c3.testPoly();
 
             ReadKey();
         }

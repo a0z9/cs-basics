@@ -17,5 +17,6 @@ namespace krasn23.a0z9.learning
         {
             return $"Struct B, data:{data,5}, object:{GetHashCode()}";
         }
+
     }
 }

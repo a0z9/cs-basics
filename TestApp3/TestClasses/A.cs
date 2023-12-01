@@ -12,6 +12,19 @@ namespace krasn23.a0z9.learning
     {
         public const int MIN_DATA = 10;
         private int data = 1;
+        private static int counter;
+
+        public static int Counter { get => counter; }
+
+        static A() {
+            WriteLine("+++ static ctor");
+            counter = 0;
+        }
+
+        public virtual void testPoly() {
+
+            WriteLine("AAAA - PolyTest: --- A class -------");
+        }
 
         public int Data {  
             get { return data; } 
@@ -20,8 +33,11 @@ namespace krasn23.a0z9.learning
                 data = value; }
         }
 
-        public int GetData() => data;
-        public void SetData(int value) => data = value;
+        public A():this(1) { }
+        public A(int data) { Data = data; WriteLine("+++ ctor (class A)" + this); counter++; }
+
+       // public int GetData() => data;
+       // public void SetData(int value) => data = value;
 
         public override string ToString()
         {
