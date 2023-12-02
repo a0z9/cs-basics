@@ -5,6 +5,27 @@ namespace krasn23.a0z9.learning
 {
     internal class Program
     {
+        static void test(object o)
+        {
+            WriteLine(o.GetType());
+            if (o.GetType() == typeof(D))
+            {
+                ((D)o).testPoly();
+                ((D)o).testD();
+            }
+            else if (o.GetType() == typeof(A))
+            {
+                ((A)o).testPoly();
+                //((D)o).testD();
+            }
+        }
+
+        static void test2<T>(T o) where T:A
+        {
+            WriteLine("======" + o.GetType() + "");
+            o.testPoly();
+         }
+
         static void Main(string[] args)
         {
             WriteLine("---------- Test Classes -----------");
@@ -36,9 +57,33 @@ namespace krasn23.a0z9.learning
             WriteLine("---------- Inheritance Test -----------");
             C c = new C();
             C c2 = new C(11);
+            D d1 = new D(1111);
+
 
             A c3 = new C(7);
+            A c4 = new D(7);
+
+          /*  test(c4);
+            test(a2);*/
+
+            test2<A>(c4);
+            test2<A>(c3);
+            test2<A>(a2);
+
+
+            Object o1 = c3;
+            object o2 = c4;
+
+
+
+            D d2 = (D)c3;
+
+            WriteLine(o1.GetType());
+            WriteLine(o2.GetType());
+
             c3.testPoly();
+
+
 
             ReadKey();
         }

@@ -8,6 +8,8 @@ using static System.Console;
 
 namespace krasn23.a0z9.learning
 {
+
+  
     internal class C : A
     {
         public C():this(1) { }  

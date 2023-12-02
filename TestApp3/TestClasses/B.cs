@@ -11,9 +11,7 @@ namespace krasn23.a0z9.learning
     {
         public int data;
 
-
-
-        public override string ToString()
+       public override string ToString()
         {
             return $"Struct B, data:{data,5}, object:{GetHashCode()}";
         }
