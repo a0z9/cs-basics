@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using static ConsoleApp1.Utils.Utils;
 using static System.Console;
 
 namespace ConsoleApp1
@@ -114,12 +115,62 @@ namespace ConsoleApp1
             // foreach
 
         }
-
         static double Summa(double[] arr) {
             double summa=0;
-
-
+            foreach (double d in arr) summa += d;
             return summa;
+        }
+        static double Summ(params double[] arr) {
+            return Summa(arr);
+        }
+        static int[] GetRandomArray(int N = 10, int min = -100, int max = 100)
+        {
+            int[] arr = new int[N];
+            Random random = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < N; i++) arr[i] = random.Next(min, max);
+            return arr;
+        }
+        static void testArray() {
+            double[] arr1 = new[] { 1.0, 2, 3 };
+            double[] arr2 = new double[] { 1.99, 2, 3, 5, 77, 8.2, -33 };
+            int[] arr4 = new int[] { 1, 2, 3, 5, 77, 8, -33, 4, 5, -2 };
+            double[] arr3 = new double[10];
+            arr3 = arr1;
+
+            arr1[2] = 1.222;
+
+            WriteLine($"[{String.Join(",", arr2)}]");
+            Write("["); foreach (double d in arr2) { Write(d + ","); }
+            Write("\b]\n");
+            Write("["); foreach (double d in new double[12]) { Write(d + ","); }
+            Write("\b]\n");
+            WriteLine("S=" + Summa(new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }));
+            WriteLine("S2=" + Summ((byte)1, 2f, 3d, (short)4.0, 5, 6000000L, 7, 8, 9, 10));
+            double dd = 1;
+            printCollection(arr4);
+            printCollection(GetRandomArray());
+            int[] rarr = GetRandomArray(min: 10, max: 1000, N: 20);
+            printCollection(rarr);
+        }
+        static bool F1(in int a, out int b, out int c) {
+
+            b = a + 1; c = a - 1;
+            return true;
+        }
+        static (int,int) F1(in int a)
+        {
+            int b, c;
+            b = a + 1; c = a - 1; 
+            return (b, c);
+        }
+
+        static void TrySwap(int a, int b){
+            int c = b; b = a; a = c;
+        }
+
+        static void Swap<T>(ref T a, ref T b)
+        {
+            T c = b; b = a; a = c;
         }
 
         static void Main(string[] args)
@@ -127,16 +178,43 @@ namespace ConsoleApp1
             //testParse();
             //Summator();
             //testIfAndCycles();
-            double[] arr1 = new[] { 1.0, 2, 3 };
-            double[] arr2 = new double[] { 1, 2, 3,5,77,8,-33 };
-            double[] arr3 = new double[10];
-            arr1[2]=1.222;
+            //testArray();
+            int c1=10, c2, c3;
+            if(F1(c1, out c2, out c3)) WriteLine($"F1 success! c2={c2}, c3={c3}");
+            (c2, c3) = F1(c1);
+            WriteLine($"F1 success! c2={c2}, c3={c3}");
 
-            WriteLine($"[{String.Join(",",arr2)}]");
-            Write("["); foreach(double d in arr2) { Write(d + ","); } Write("\b]");
-            Write("["); foreach (double d in new double[12]) { Write(d + ","); } Write("\b]");
+            (int v1, int v2) tuple = F1(100);
+            WriteLine($"F1 success! tuple.v1={tuple.v1}, tuple.v2={tuple.v2}");
 
+            WriteLine("----------- Swap test ------------");
 
+            int x = 111, y = 222;
+            WriteLine($"x={x}, y={y}.");
+            TrySwap(x, y);
+            WriteLine($"x={x}, y={y}.");
+            
+            Swap<int>(ref x, ref y);
+            WriteLine($"x={x}, y={y}.");
+
+            WriteLine("----------- String test ------------");
+
+            string calc_str = "  12      +   13 "; // 12+ 33
+            string calc_str2 = "    12 +13   ";
+            calc_str = calc_str.Trim();
+            string[] sarr = calc_str.Split(new char[] {' ','\t'}, StringSplitOptions.RemoveEmptyEntries);
+            printCollection(sarr);
+            int idx = calc_str2.IndexOf("+");
+            if (idx != -1)
+            { 
+              string left = calc_str2.Substring(0, idx);
+              string right = calc_str2.Substring(++idx);
+              left = left.Trim();
+              right = right.Trim();
+
+              WriteLine($"{left} + {right}");
+
+            }
 
             // int a = 10;
             ReadKey();
