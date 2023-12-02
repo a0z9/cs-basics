@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using static System.Console;
 
-namespace ConsoleApp1.Utils
+namespace ConsoleApp1.ConsoleUtils
 {
     public static class Utils
     {

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using static ConsoleApp1.Utils.Utils;
+using static ConsoleApp1.ConsoleUtils.Utils;
 using static System.Console;
+using  ConsoleApp1.ConsoleUtils;
 
 namespace ConsoleApp1
 {
@@ -203,7 +204,7 @@ namespace ConsoleApp1
             string calc_str2 = "    12 +13   ";
             calc_str = calc_str.Trim();
             string[] sarr = calc_str.Split(new char[] {' ','\t'}, StringSplitOptions.RemoveEmptyEntries);
-            printCollection(sarr);
+            Utils.printCollection(sarr);
             int idx = calc_str2.IndexOf("+");
             if (idx != -1)
             { 
