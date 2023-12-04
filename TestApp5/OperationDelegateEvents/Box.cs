@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace OperationDelegateEvents
 {
+    
     internal class Box<T>
     {
+        public event Action<string> NewElement;
         private T[] arr;
         public int Length { get; private set; }
         private uint idx;
@@ -27,13 +29,16 @@ namespace OperationDelegateEvents
 
         public bool Add(T item)
         {
-            if (idx < Length) { arr[idx++] = item; return true; }
+            if (idx < Length) { 
+                arr[idx++] = item;
+                NewElement?.Invoke($"Add element at: {idx-1}, o:{arr[idx-1]}");
+                return true; }
             return false;
         }
 
-        public T? this[uint index]
+        public T this[uint index]
         {
-            get { if (isIndexValid(index)) { return arr[index]; } return default(T);  }
+            get { if (isIndexValid(index)) { return arr[index]; } return default;  }
             set { if (isIndexValid(index)) arr[index] = value; }
         }
 
