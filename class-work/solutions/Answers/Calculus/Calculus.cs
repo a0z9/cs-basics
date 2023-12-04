@@ -167,6 +167,8 @@ namespace krasn23.a0z9.learning
 
                 }
                 expr = expr?.Replace(',', '.').Replace("_", "").Trim();
+               // UInt128 u;
+               // Decimal d;
                 
                 
                 // number format for double
@@ -191,11 +193,9 @@ namespace krasn23.a0z9.learning
 #endif
                     }
                 }
-
                 double res = 0, d1 = 0, d2 = 0;
 
-                if (!double.TryParse(strs["left"], out d1) ||
-                    !double.TryParse(strs["right"], out d2))
+                if (!double.TryParse(strs["left"], out d1) || !double.TryParse(strs["right"], out d2))
                 {
                     WriteLine("Wrong number format.."); continue;
                 }
