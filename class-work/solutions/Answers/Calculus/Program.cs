@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using static krasn23.a0z9.learning.Calculus;
 
 namespace krasn23.a0z9.learning
 {
@@ -10,7 +12,8 @@ namespace krasn23.a0z9.learning
     {
         static void Main(string[] args)
         {
-            Calculus.Calc();
+            //Calc1();
+            Calc2();
         }
     }
 }
