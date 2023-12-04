@@ -135,7 +135,7 @@ namespace krasn23.a0z9.learning
                             case "/": case ":":  res = d1 / d2; break;
                             case "^": case "**": res = Math.Pow(d1,d2); break;
                             case "%": res = d1*d2/100.0; break;
-                             default: WriteLine("Wrong operation.."); continue;
+                            default: WriteLine("Wrong operation.."); continue;
                         }
                 if(/*(res == 0 && d1 != 0 && d2 != 0) ||*/ double.IsInfinity(res) || double.IsNaN(res)) 
                 { WriteLine("Overflow or result is not real value.."); continue; }

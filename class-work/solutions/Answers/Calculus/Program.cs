@@ -12,8 +12,8 @@ namespace krasn23.a0z9.learning
     {
         static void Main(string[] args)
         {
-            //Calc1();
-            Calc2();
+            Calc1();
+           // Calc2();
         }
     }
 }
