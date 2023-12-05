@@ -10,5 +10,7 @@ namespace ConsoleApp1
     {
         IMovable move(int dx, int dy);
         IMovable rotate(int angle);
+        //IMovable jump(int L, int angle);
+
     }
 }

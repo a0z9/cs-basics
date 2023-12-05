@@ -10,9 +10,9 @@ namespace ConsoleApp1
 {
     internal abstract class Box : IMovable
     {
-        protected int X {  get; set; }
+        protected int X { get; set; }
         protected int Y { get; set; }
-        protected int Angle { get; set; }
+        public int Angle { get; protected set; }
 
         protected Box(int x, int y, int angle) { X = x; Y = y; Angle = angle; }
         protected Box() : this(0, 0, 0) { }
