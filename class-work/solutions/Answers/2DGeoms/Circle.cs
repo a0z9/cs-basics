@@ -17,10 +17,10 @@ namespace krasn23.a0z9.learning
 
         private Circle(double a, double b) { }
 
-        public override string ToString()
+   /*     public override string ToString()
         {
             return $"Circle:    R={a}, P={P:N5}, S={S:N5}.";
-        }
+        }*/
 
 
     }

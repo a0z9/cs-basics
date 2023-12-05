@@ -6,23 +6,13 @@ using System.Threading.Tasks;
 
 namespace krasn23.a0z9.learning
 {
-    internal class Ellipse : Figure
+    internal class Ellipse : Figure2dim
     {
-        protected double _a, _b;
-    
-        public double a { get=>_a; set => _a=value; }
-        public double b { get=>_b; set => _b=value; }
-
 
         public Ellipse(double a) : this(a,a) { }
-        public Ellipse(double a, double b)
-        {
-            _b = b;
-            _a = a;
-        }
-        
+        public Ellipse(double a, double b):base(a,b) { }
+        public Ellipse(double a, double b, Coords2D coords) : base(a, b, coords) { }
         public Ellipse() : this(1, 1) { }
-                       
 
         public override double S
         {
@@ -33,8 +23,8 @@ namespace krasn23.a0z9.learning
             get => Math.PI * (_a + _b);
         }
 
-        public override string ToString() {
+     /*   public override string ToString() {
             return $"Ellipse:   a={_a}, b={_b}, P={P:N5}, S={S:N5}.";
-        }
+        }*/
     }
 }
