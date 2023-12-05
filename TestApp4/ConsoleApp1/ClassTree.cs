@@ -40,6 +40,9 @@ namespace ConsoleApp1
 
     internal class Monster : Sprite
     {
+        public Monster(int x, int y, int angle) : base(x, y, angle) { }
+        public Monster() : base() { }
+
         public override IMovable rotate(int angle)
         {
             Write("Rendering of Monster..: ");

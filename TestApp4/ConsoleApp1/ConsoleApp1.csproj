@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ClassTree.cs" />
     <Compile Include="IMovable.cs" />
+    <Compile Include="MyExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

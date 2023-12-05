@@ -12,12 +12,13 @@ namespace ConsoleApp1
         static void Map_1657_Path(IMovable mv)
         {
             mv.move(1, 2).rotate(369).move(-2, 5);///
+            mv.jump(20, 45);
         
         }
 
         static void Main(string[] args)
         {
-            Monster monster = new Monster();
+            Monster monster = new Monster(-10,3,0);
             Man man = new Man();
             WriteLine(monster); WriteLine(man);
             Map_1657_Path(monster);
