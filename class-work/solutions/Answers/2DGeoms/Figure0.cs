@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace krasn23.a0z9.learning
 {
-    internal class Program
+    public abstract class Figure0
     {
-        static void Main(string[] args)
-        {
-            Calculus.Calc();
-        }
+        public abstract double S { get; }
+        public abstract double P { get; }
+
+        
     }
 }

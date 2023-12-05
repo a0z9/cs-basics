@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace krasn23.a0z9.learning
 {
-    internal class Ellipse0 : Figure
+    internal class Ellipse0 : Figure0
     {
         public double a { get; set; }
         public double b { get; set; }
