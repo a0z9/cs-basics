@@ -10,14 +10,14 @@ namespace ConsoleApp1
 {
     internal static class MyExtensions
     {
+        public static int MyCount(this string str) => str.Length;
+
         public static IMovable jump(this IMovable mv, int j, int angle) {
             //Sprite s = mv as Sprite;
             int dx = (int)(j * Math.Sin(angle*Math.PI/180));
             int dy = (int)(j * Math.Cos(angle * Math.PI /180));
             Write($"Jump at {j} to angle {angle}..");
             return mv.rotate(angle).move(dx, dy);
-       
         }
-
     }
 }

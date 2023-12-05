@@ -23,7 +23,9 @@ namespace ConsoleApp1
             WriteLine(monster); WriteLine(man);
             Map_1657_Path(monster);
             WriteLine(monster);
-
+            //-------- ext test
+            WriteLine("------------  ext test ----------- ");
+            WriteLine("ext test".MyCount());
         }
     }
 }
