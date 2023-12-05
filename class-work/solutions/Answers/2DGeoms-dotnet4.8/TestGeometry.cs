@@ -13,7 +13,7 @@ namespace krasn23.a0z9.learning
 
             WriteLine("------------ 2D Geom Test ------------");
             Circle c1 = new Circle(10);
-            c1.Coords = new Coords2D(10, 10);   
+            c1.Coords = new Point2D(-10, 10);   
 
             WriteLine(c1);
             c1.b = 1;
@@ -22,12 +22,15 @@ namespace krasn23.a0z9.learning
             Ellipse c2 = new Circle();
             WriteLine($"{c2.GetType()},  {c2 is Circle}, {c2 is Ellipse}, {c2 is Figure} ");
             WriteLine(c2);
-            Figure e1 = new Ellipse(1,2,new Coords2D(-10,2));
+            Figure e1 = new Ellipse(1,2,new Point2D(-10,2));
             WriteLine(e1);
             Figure r1 = new Rectangle(10,2);
             WriteLine(r1);
             Rectangle s1 = new Square(10);
             WriteLine(s1);
+
+            Figure tr = new Triangle(); tr.Coords = new Point2D(-1,1);
+            WriteLine(tr);
 
             ReadKey();
         }

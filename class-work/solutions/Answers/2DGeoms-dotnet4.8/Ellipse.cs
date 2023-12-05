@@ -11,7 +11,7 @@ namespace krasn23.a0z9.learning
 
         public Ellipse(double a) : this(a,a) { }
         public Ellipse(double a, double b):base(a,b) { }
-        public Ellipse(double a, double b, Coords2D coords) : base(a, b, coords) { }
+        public Ellipse(double a, double b,Point2D coords) : base(a, b, coords) { }
         public Ellipse() : this(1, 1) { }
 
         public override double S

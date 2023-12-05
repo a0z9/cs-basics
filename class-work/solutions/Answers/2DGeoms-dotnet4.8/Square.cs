@@ -16,12 +16,5 @@ namespace krasn23.a0z9.learning
         public Square() : base() { }
 
         private Square(double a, double b) { }
-
-        //public override string ToString()
-        //{
-        //    return $"Square:    a={a}, P={P:N5}, S={S:N5}, .";
-        //}
-
-
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace krasn23.a0z9.learning
 {
-    internal class Coords2D
+    internal class Point2D
     {
         public int x { get; set; }
         public int y { get; set; }  
-        public Coords2D(int x, int y) {
+        public Point2D(int x, int y) {
             this.x = x;
             this.y = y;
         }

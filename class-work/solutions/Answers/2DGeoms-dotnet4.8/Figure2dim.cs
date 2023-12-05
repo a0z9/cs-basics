@@ -14,8 +14,8 @@ namespace krasn23.a0z9.learning
         public double b { get => _b; set => _b = value; }
 
         public Figure2dim(double a) : this(a, a) { }
-        public Figure2dim(double a, double b) : this(a, b, new Coords2D(0, 0)) { }
-        public Figure2dim(double a, double b, Coords2D Coords)
+        public Figure2dim(double a, double b) : this(a, b, new Point2D(0, 0)) { }
+        public Figure2dim(double a, double b,Point2D Coords)
         {
             this.Coords = Coords;
             _b = b;
