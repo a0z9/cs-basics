@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DGeoms", "2DGeoms\2DGeoms.csproj", "{9C2DAD0E-0594-4B23-9A96-F317F03933B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculus", "Calculus\Calculus.csproj", "{E4D63722-F38F-44D5-8D2A-A522D45B0CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculus", "Calculus\Calculus.csproj", "{E4D63722-F38F-44D5-8D2A-A522D45B0CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGeoms-dotnet4.8", "2DGeoms-dotnet4.8\2DGeoms-dotnet4.8.csproj", "{F29D0912-EF21-4A3E-BE45-2F67B7054E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E4D63722-F38F-44D5-8D2A-A522D45B0CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4D63722-F38F-44D5-8D2A-A522D45B0CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4D63722-F38F-44D5-8D2A-A522D45B0CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29D0912-EF21-4A3E-BE45-2F67B7054E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29D0912-EF21-4A3E-BE45-2F67B7054E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29D0912-EF21-4A3E-BE45-2F67B7054E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29D0912-EF21-4A3E-BE45-2F67B7054E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

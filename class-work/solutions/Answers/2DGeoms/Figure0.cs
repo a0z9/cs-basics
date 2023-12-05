@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace krasn23.a0z9.learning
 {
-     abstract class Figure
+    public abstract class Figure0
     {
-        public Coords2D Coords {  get; set; }
-
         public abstract double S { get; }
         public abstract double P { get; }
 
