@@ -14,12 +14,10 @@ namespace TestGenerics
         static void Swap2(ref int a, ref int b) {
             int c = a; a = b; b = c;
         }
-
         static void Swap<T>(ref T a, ref T b)
         {
             T c = a; a = b; b = c;
         }
-
 
         static void Main(string[] args)
         {
@@ -32,9 +30,16 @@ namespace TestGenerics
 
             Account acc1 = new Account(deposit: 111);
             Account acc2 = new Account(deposit: 222);
+
             WriteLine($"{acc1}, {acc2};");
             Swap(ref acc1, ref acc2);
             WriteLine($"{acc1}, {acc2};");
+            WriteLine("---------- Generic Type Test ----------");
+
+            Box<string> box = new Box<string>(3);
+            box.Add("AAA").Add("BBB").Add("CCC").Add("DDD");
+            for (uint i = 0; i < 5; i++) WriteLine("--> " + box[i] + " <--");
+
 
 
 
