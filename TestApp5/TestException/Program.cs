@@ -24,8 +24,7 @@ namespace TestException
             return int.Parse(sid);
         }
 
-        static void Main(string[] args)
-        {
+        static void ExceptionTest() {
             try
             {
                 int a = getValue(4);
@@ -46,7 +45,7 @@ namespace TestException
             //    Console.WriteLine(ex + "\n------------------");
             //}
 
-            catch (Exception ex) when 
+            catch (Exception ex) when
             (ex is IndexOutOfRangeException || ex is DivideByZeroException)
             {
                 // Log exception to file(s), log to network, ....
@@ -65,6 +64,18 @@ namespace TestException
                 WriteLine("-- Finally Block --");
             }
 
+        }
+
+        static void Main(string[] args)
+        {
+            //  ExceptionTest();
+            Account acc = new Account(deposit: 1000);
+            acc.Put(2000);
+            acc.Put(10_000);
+            WriteLine("Deposite:" + acc.Deposit);
+            acc.Withdraw(9_000);
+            acc.Withdraw(3_985);
+            WriteLine("Deposite:" + acc.Deposit);
 
             WriteLine("-- End of Main --");
         }
