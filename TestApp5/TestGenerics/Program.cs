@@ -18,6 +18,12 @@ namespace TestGenerics
         {
             T c = a; a = b; b = c;
         }
+        static double Summa<T>(T[] arr) { 
+        double sum = 0;
+            foreach (object value in arr) sum += Convert.ToDouble(value);
+
+            return sum;
+        }
 
         static void Main(string[] args)
         {
@@ -40,8 +46,8 @@ namespace TestGenerics
             box.Add("AAA").Add("BBB").Add("CCC").Add("DDD");
             for (uint i = 0; i < 5; i++) WriteLine("--> " + box[i] + " <--");
 
-
-
+            WriteLine("---------- Generic Summa Test ----------");
+            WriteLine("Summa=" + Summa(new double[] { 1.01, 2, 3, 4, 5.1, 6, 7, 8, 9 }));
 
 
 
