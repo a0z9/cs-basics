@@ -19,25 +19,45 @@ namespace TestException
             return b[idx];
         }
 
+        static int getValue(string sid)
+        {
+            return int.Parse(sid);
+        }
+
         static void Main(string[] args)
         {
             try
             {
-                int a = getValue(5);
-                TestDiv(1);
+                int a = getValue(4);
+                TestDiv(10);
+                a = getValue("111a");
 
                 WriteLine("-- End of Try Block --");
             }
-            catch (DivideByZeroException ex)
+            //catch (DivideByZeroException ex)
+            //{
+            //    // Log exception to file(s), log to network, ....
+            //    Console.WriteLine(ex + "\n------------------");
+            //    throw new Exception("Rethrow ex!!", ex);
+            //}
+            //catch (IndexOutOfRangeException ex)
+            //{
+            //    // Log exception to file(s), log to network, ....
+            //    Console.WriteLine(ex + "\n------------------");
+            //}
+
+            catch (Exception ex) when 
+            (ex is IndexOutOfRangeException || ex is DivideByZeroException)
+            {
+                // Log exception to file(s), log to network, ....
+                Console.WriteLine(ex + "\n------------------");
+            }
+
+            catch (Exception ex)
             {
                 // Log exception to file(s), log to network, ....
                 Console.WriteLine(ex + "\n------------------");
                 throw new Exception("Rethrow ex!!", ex);
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                // Log exception to file(s), log to network, ....
-                Console.WriteLine(ex + "\n------------------");
             }
 
             finally
