@@ -12,18 +12,15 @@ namespace TestException
         static void TestDiv(int a) {
             int b = 1 / (a - 1);
         }
-
         static int getValue(uint idx)
         {
             int[] b = new int[] {1,2,-4,5,6 };
             return b[idx];
         }
-
         static int getValue(string sid)
         {
             return int.Parse(sid);
         }
-
         static void ExceptionTest() {
             try
             {

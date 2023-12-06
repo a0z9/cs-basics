@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestException
 {
-    class AccountException : Exception {
+    public class AccountException : Exception {
     //Logging,.....
     //Extra Account data,.... 
     public AccountException(string message) : base(message) { }
@@ -15,7 +15,7 @@ namespace TestException
         }
     }
 
-    internal class Account
+    public class Account
     {
         public const uint MIN_DEPOSIT = 10;
         public const uint MIN_TRANSACTION = 10;
@@ -75,6 +75,7 @@ namespace TestException
                 else throw new AccountException($"Deposit set failed.. {value}"); 
             } }
 
-
+        public override string ToString() =>
+        $"Acc deposit: {Deposit}.";
     }
 }

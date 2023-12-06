@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestException", "TestException\TestException.csproj", "{295D7B80-95DF-4AC1-B676-CAE728A5238A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenerics", "TestGenerics\TestGenerics.csproj", "{5F5E7535-647B-4927-8789-0EB74BE22C19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{295D7B80-95DF-4AC1-B676-CAE728A5238A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295D7B80-95DF-4AC1-B676-CAE728A5238A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295D7B80-95DF-4AC1-B676-CAE728A5238A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5E7535-647B-4927-8789-0EB74BE22C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5E7535-647B-4927-8789-0EB74BE22C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5E7535-647B-4927-8789-0EB74BE22C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5E7535-647B-4927-8789-0EB74BE22C19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
