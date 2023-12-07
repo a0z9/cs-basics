@@ -12,8 +12,10 @@
 - https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 - https://www.geeksforgeeks.org/c-sharp-version-history/
 
-### dotnet Source Browser
+### dotnet Source Browser and some classes
 - https://source.dot.net/
+- https://source.dot.net/#q=Enumerable
+- https://source.dot.net/#q=Array
 
 ### dotnet open src projects
 - https://github.com/dotnet/docs/blob/main/docs/welcome.md
@@ -31,3 +33,8 @@
 - https://www.programiz.com/csharp-programming/online-compiler/
 - https://www.onlinegdb.com/online_csharp_compiler
 - https://onecompiler.com/csharp
+
+### Special .NET projects
+- https://github.com/dotnet/core
+- https://github.com/dotnet/aspnetcore
+- 
