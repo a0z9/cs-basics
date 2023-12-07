@@ -2,6 +2,7 @@
 global using static System.Console;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace ConsoleCollectionApp1
 {
@@ -58,6 +59,44 @@ namespace ConsoleCollectionApp1
             echo(iarr);
             iarr.Sort(new MyCompare());
 
+
+            WriteLine("------------- Collections Stack & Queue & LinkedList ----------- ");
+
+            Stack<int> stack =new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3); stack.Pop(); echo(stack);
+
+            Queue queue = new Queue();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Dequeue(); echo(queue);
+
+            LinkedList<int> ints = new LinkedList<int>();
+            ints.AddFirst(1);
+            ints.AddFirst(2);
+            ints.AddFirst(3);
+            ints.AddLast(4);
+            echo(ints);
+
+
+            WriteLine("------------- MAps - Dicts----------- ");
+
+            Dictionary<int, string> dict = new Dictionary<int, string>
+            {{1, "One" },
+             { 3,"Three"},
+                { 2, "Two"}
+               
+            };
+            dict[1] = "Один";
+            dict.Add(4, "Четыре");
+            foreach (int k in dict.Keys) WriteLine(k + "-->" + dict[k]);
+            var dict2 = dict.OrderBy(x => x.Value).ToDictionary(x => x.Key);
+            WriteLine("------- Sorted Dict -------");
+            foreach (int k in dict2.Keys) WriteLine(k + "-->" + dict[k]);
+            dict2 = dict.OrderBy(x => x.Key).ToDictionary(x => x.Key);
+            foreach (int k in dict2.Keys) WriteLine(k + "-->" + dict[k]);
 
             // WriteLine(String.Join(",", arr1));
 
